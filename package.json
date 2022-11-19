@@ -6,11 +6,11 @@
   "scripts": {
     "build:client": "webpack",
     "build:server": "babel src --out-dir dist",
-    "build":"npm run build:client && npm run build:server",
+    "build": "npm run build:client && npm run build:server",
     "start:client": "webpack --watch",
     "start:server": "nodemon --exec babel-node src/server/index.js",
     "start": "npm run start:client & npm run start:server",
-    "start:dist":"node dist/server/index.js"
+    "start:dist": "node dist/server/index.js"
   },
   "keywords": [],
   "author": "",
@@ -19,8 +19,10 @@
     "express": "4.18.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "4.6.0",
     "socket.io": "4.5.3",
-    "socket.io-client": "4.5.3"
+    "socket.io-client": "4.5.3",
+    "styled-components": "5.3.6"
   },
   "devDependencies": {
     "@babel/cli": "7.19.3",
@@ -29,9 +31,32 @@
     "@babel/plugin-transform-runtime": "7.19.6",
     "@babel/preset-env": "7.20.2",
     "@babel/preset-react": "7.18.6",
+    "autoprefixer": "10.4.13",
     "babel-loader": "9.1.0",
+    "css-loader": "6.7.2",
+    "mini-css-extract-plugin": "2.7.0",
     "nodemon": "2.0.20",
+    "postcss": "8.4.19",
+    "sass": "1.56.1",
+    "sass-loader": "13.2.0",
+    "style-loader": "3.3.1",
     "webpack": "5.75.0",
     "webpack-cli": "4.10.0"
-  }
+  },
+  "browserslist": [
+    "last 2 versions",
+    "last 5 Chrome versions",
+    "last 5 iOS major versions",
+    "last 2 Samsung versions",
+    "last 5 safari versions",
+    "Firefox ESR",
+    "IE 10",
+    "IE_Mob 11",
+    "iOS 7-11",
+    "ios_saf 11",
+    "Firefox > 20",
+    "ie 6-8",
+    "PhantomJS 2.1",
+    "PhantomJS 1.9"
+  ]
 }
