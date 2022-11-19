@@ -1,6 +1,5 @@
-import autoprefixer from "autoprefixer";
-export default {
-    plugin: [
-        autoprefixer()
+module.exports = {
+    plugins: [
+        require('autoprefixer')
     ]
 }
