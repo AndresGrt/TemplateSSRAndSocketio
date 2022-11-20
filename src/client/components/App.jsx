@@ -1,12 +1,18 @@
 import React from 'react';
+import CounterUsers from './CounterUsers';
+import SocketContext from '../context/SocketContext';
 import io from 'socket.io-client';
-const socket = io();
 
+const socket = io();
 function App() {
     return (
-        <div className='app'>
-            <h1>Hola mundo con React jsx</h1>
-        </div>
+        <SocketContext.Provider value={socket}>
+            <div className='app'>
+                <img src="/assets/Andres.svg" alt="Andres" width={256} />
+                <h1>Hola mundo con React jsx</h1>
+                <CounterUsers />
+            </div>
+        </SocketContext.Provider>
     );
 }
 
